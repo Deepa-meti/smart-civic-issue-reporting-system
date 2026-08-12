@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — Civic Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/register.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <header class="navbar">
+    <div class="navbar__inner">
+
+      <a href="#" class="navbar__brand" aria-label="Civic Report home">
+        <!-- map-pin icon -->
+        <svg class="navbar__logo-icon" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                fill="#2563EB"/>
+          <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+        </svg>
+        <span class="navbar__brand-name">Civic Report</span>
+      </a>
+
+      <!-- Desktop nav -->
+     <nav class="navbar__nav" aria-label="Primary navigation">
+    <a href="index.html" class="navbar__link">Home</a>
+    <a href="about.html" class="navbar__link">About</a>
+    <a href="contact.html" class="navbar__link">Contact</a>
+    </nav>
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--outline">Login</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false"
+              aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile menu -->
+  <div class="navbar__mobile" id="mobile-menu" hidden>
+    <a href="index.html" class="navbar__mobile-link">Home</a>
+    <a href="about.html" class="navbar__mobile-link">About</a>
+    <a href="contact.html" class="navbar__mobile-link">Contact</a>
+    <a href="login.html" class="navbar__mobile-link navbar__mobile-link--cta">Login</a>
+</div>
+  </header>
+
+  <!-- ═══════════════════════════ MAIN ════════════════════════════ -->
+  <main class="page">
+
+    <!-- Left panel -->
+    <section class="hero" aria-hidden="true">
+      <div class="hero__content">
+        <h1 class="hero__heading">Create Your<br>Account</h1>
+        <p class="hero__sub">Join thousands of citizens working together to build cleaner, safer, and better communities.</p>
+
+        <!-- Illustration -->
+        <div class="hero__illustration">
+          <!-- city silhouette -->
+          <svg class="hero__city" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- sky tint -->
+            <rect width="480" height="220" fill="none"/>
+            <!-- buildings (back) -->
+            <rect x="0"   y="80"  width="50"  height="140" rx="2" fill="rgba(255,255,255,0.12)"/>
+            <rect x="55"  y="50"  width="40"  height="170" rx="2" fill="rgba(255,255,255,0.15)"/>
+            <rect x="100" y="90"  width="60"  height="130" rx="2" fill="rgba(255,255,255,0.10)"/>
+            <rect x="165" y="60"  width="45"  height="160" rx="2" fill="rgba(255,255,255,0.13)"/>
+            <rect x="215" y="100" width="55"  height="120" rx="2" fill="rgba(255,255,255,0.10)"/>
+            <rect x="275" y="70"  width="35"  height="150" rx="2" fill="rgba(255,255,255,0.12)"/>
+            <rect x="315" y="40"  width="55"  height="180" rx="2" fill="rgba(255,255,255,0.16)"/>
+            <rect x="375" y="85"  width="45"  height="135" rx="2" fill="rgba(255,255,255,0.11)"/>
+            <rect x="425" y="65"  width="55"  height="155" rx="2" fill="rgba(255,255,255,0.13)"/>
+            <!-- ground -->
+            <rect x="0" y="198" width="480" height="22" rx="0" fill="rgba(0,0,0,0.18)"/>
+            <!-- road -->
+            <rect x="100" y="198" width="280" height="22" fill="rgba(0,0,0,0.28)"/>
+            <!-- road stripe -->
+            <rect x="228" y="205" width="24" height="4" rx="2" fill="rgba(255,255,255,0.35)"/>
+            <!-- lamp post -->
+            <rect x="300" y="140" width="4" height="60" fill="rgba(255,255,255,0.5)"/>
+            <rect x="290" y="138" width="24" height="4" rx="2" fill="rgba(255,255,255,0.5)"/>
+            <circle cx="290" cy="136" r="5" fill="rgba(255,255,255,0.7)"/>
+            <!-- person silhouette (simplified) -->
+            <ellipse cx="180" cy="170" rx="10" ry="10" fill="rgba(255,255,255,0.9)"/>
+            <rect x="173" y="180" width="14" height="18" rx="3" fill="rgba(255,255,255,0.9)"/>
+            <!-- map pin bubble -->
+            <circle cx="218" cy="155" r="20" fill="white" opacity="0.95"/>
+            <path d="M218 146c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                  fill="#2563EB"/>
+            <circle cx="218" cy="153" r="2.5" fill="white"/>
+            <!-- pothole -->
+            <ellipse cx="200" cy="205" rx="20" ry="8" fill="rgba(0,0,0,0.45)"/>
+            <!-- tree -->
+            <ellipse cx="350" cy="155" rx="18" ry="20" fill="rgba(34,197,94,0.55)"/>
+            <rect x="348" y="174" width="4" height="24" fill="rgba(0,0,0,0.3)"/>
+            <!-- trash bin -->
+            <rect x="265" y="182" width="14" height="18" rx="2" fill="#2563EB" opacity="0.7"/>
+            <rect x="263" y="180" width="18" height="3" rx="1" fill="#1D4ED8" opacity="0.7"/>
+          </svg>
+        </div>
+
+        <!-- Trust badge -->
+        <div class="hero__badge">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2L4 6v6c0 5.25 3.4 10.14 8 11.5C16.6 22.14 20 17.25 20 12V6l-8-4z"
+                  fill="#2563EB"/>
+            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <strong>Your voice matters!</strong>
+            <p>Report issues in your area and help authorities take quick action.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right panel — registration card -->
+    <section class="form-panel">
+      <div class="card">
+
+        <!-- Card header -->
+        <div class="card__header">
+          <div class="card__avatar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="4" fill="white"/>
+              <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="white" stroke-width="2"
+                    stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2 class="card__title">Create Your Account</h2>
+          <p class="card__subtitle">Fill in the details below to get started.</p>
+        </div>
+
+        <!-- Form -->
+        <form class="form" action="#" method="post" novalidate>
+
+          <!-- Personal Information -->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Personal Information</legend>
+
+            <div class="form__group">
+              <label class="form__label" for="full-name">
+                Full Name <span class="form__required" aria-label="required">*</span>
+              </label>
+              <div class="form__input-wrap">
+                <svg class="form__input-icon" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4" stroke="#94A3B8" stroke-width="1.5"/>
+                  <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" stroke="#94A3B8" stroke-width="1.5"
+                        stroke-linecap="round"/>
+                </svg>
+                <input class="form__input" type="text" id="full-name" name="full_name"
+                       placeholder="Enter your full name" required autocomplete="name"/>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="email">
+                Email Address <span class="form__required" aria-label="required">*</span>
+              </label>
+              <div class="form__input-wrap">
+                <svg class="form__input-icon" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2" stroke="#94A3B8" stroke-width="1.5"/>
+                  <path d="M3 8l9 6 9-6" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input class="form__input" type="email" id="email" name="email"
+                       placeholder="Enter your email address" required autocomplete="email"/>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="phone">
+                Phone Number <span class="form__required" aria-label="required">*</span>
+              </label>
+              <div class="form__input-wrap">
+                <svg class="form__input-icon" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24
+                           c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.04 21 3 13.96
+                           3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0
+                           01-.25 1.02l-2.2 2.2z"
+                        stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input class="form__input" type="tel" id="phone" name="phone"
+                       placeholder="Enter your phone number" required autocomplete="tel"/>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Location -->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Location</legend>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="state">
+                  State <span class="form__required" aria-label="required">*</span>
+                </label>
+                <div class="form__input-wrap form__input-wrap--select">
+                  <select class="form__input form__select" id="state" name="state" required>
+                    <option value="" disabled selected>Select your state</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                    <option>Delhi</option>
+                    <option>Jammu &amp; Kashmir</option>
+                    <option>Ladakh</option>
+                    <option>Puducherry</option>
+                    <option>Chandigarh</option>
+                    <option>Andaman &amp; Nicobar Islands</option>
+                    <option>Dadra &amp; Nagar Haveli and Daman &amp; Diu</option>
+                    <option>Lakshadweep</option>
+                  </select>
+                  <svg class="form__select-arrow" viewBox="0 0 24 24" fill="none"
+                       xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" stroke="#64748B" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="city">
+                  City <span class="form__required" aria-label="required">*</span>
+                </label>
+                <div class="form__input-wrap">
+                  <svg class="form__input-icon" viewBox="0 0 24 24" fill="none"
+                       xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13
+                             c0-3.87-3.13-7-7-7z" stroke="#94A3B8" stroke-width="1.5"/>
+                    <circle cx="12" cy="9" r="2.5" stroke="#94A3B8" stroke-width="1.5"/>
+                  </svg>
+                  <input class="form__input" type="text" id="city" name="city"
+                         placeholder="Enter your city" required autocomplete="address-level2"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="locality">
+                Locality / Area
+                <span class="form__optional">(optional)</span>
+              </label>
+              <div class="form__input-wrap">
+                <svg class="form__input-icon" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M3 10l9-7 9 7v11a1 1 0 01-1 1H4a1 1 0 01-1-1V10z"
+                        stroke="#94A3B8" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M9 21V12h6v9" stroke="#94A3B8" stroke-width="1.5"
+                        stroke-linejoin="round"/>
+                </svg>
+                <input class="form__input" type="text" id="locality" name="locality"
+                       placeholder="e.g. Koramangala, Banjara Hills…"/>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Account Information -->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Account Information</legend>
+
+            <div class="form__group">
+              <label class="form__label" for="password">
+                Password <span class="form__required" aria-label="required">*</span>
+              </label>
+              <div class="form__input-wrap">
+                <svg class="form__input-icon" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="5" y="11" width="14" height="10" rx="2" stroke="#94A3B8" stroke-width="1.5"/>
+                  <path d="M8 11V7a4 4 0 018 0v4" stroke="#94A3B8" stroke-width="1.5"
+                        stroke-linecap="round"/>
+                </svg>
+                <input class="form__input form__input--password" type="password"
+                       id="password" name="password"
+                       placeholder="Enter your password" required
+                       autocomplete="new-password"/>
+                <button type="button" class="form__toggle-pw"
+                        aria-label="Show password" data-target="password">
+                  <svg class="icon-eye" viewBox="0 0 24 24" fill="none"
+                       xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                          stroke="#94A3B8" stroke-width="1.5"/>
+                    <circle cx="12" cy="12" r="3" stroke="#94A3B8" stroke-width="1.5"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="confirm-password">
+                Confirm Password <span class="form__required" aria-label="required">*</span>
+              </label>
+              <div class="form__input-wrap">
+                <svg class="form__input-icon" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="5" y="11" width="14" height="10" rx="2" stroke="#94A3B8" stroke-width="1.5"/>
+                  <path d="M8 11V7a4 4 0 018 0v4" stroke="#94A3B8" stroke-width="1.5"
+                        stroke-linecap="round"/>
+                </svg>
+                <input class="form__input form__input--password" type="password"
+                       id="confirm-password" name="confirm_password"
+                       placeholder="Confirm your password" required
+                       autocomplete="new-password"/>
+                <button type="button" class="form__toggle-pw"
+                        aria-label="Show confirm password" data-target="confirm-password">
+                  <svg class="icon-eye" viewBox="0 0 24 24" fill="none"
+                       xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                          stroke="#94A3B8" stroke-width="1.5"/>
+                    <circle cx="12" cy="12" r="3" stroke="#94A3B8" stroke-width="1.5"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Terms -->
+          <div class="form__terms">
+            <input type="checkbox" id="terms" name="terms" required class="form__checkbox"/>
+            <label for="terms" class="form__terms-label">
+              I agree to the
+              <a href="#" class="form__link">Terms &amp; Conditions</a>
+              and
+              <a href="#" class="form__link">Privacy Policy</a>.
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn--primary btn--full">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true" width="18" height="18">
+              <path d="M16 11c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z"
+                    fill="white"/>
+              <path d="M4 20c0-2.67 5.33-4 8-4s8 1.33 8 4" stroke="white" stroke-width="2"
+                    stroke-linecap="round"/>
+              <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12
+                       M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"
+                    stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+            Create Account
+          </button>
+
+          <!-- Divider -->
+          <div class="form__divider" aria-hidden="true">
+            <span>OR</span>
+          </div>
+
+          <!-- Login link -->
+          <p class="form__login">
+            Already have an account?
+            <a href="#" class="form__link form__link--bold">Login</a>
+          </p>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+             width="16" height="16" aria-hidden="true">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                fill="#2563EB"/>
+          <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+        </svg>
+        <span>Civic Report &copy; 2026. All rights reserved.</span>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#" class="footer__link">Privacy Policy</a>
+        <a href="#" class="footer__link">Terms &amp; Conditions</a>
+        <a href="#" class="footer__link">Help</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Hamburger toggle (no-JS graceful fallback: menu hidden) -->
+ <script src="js/register.js"></script>
+
+</body>
+</html>
