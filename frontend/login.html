@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Login to Civic Report — the civic issue reporting platform."
+    />
+
+    <title>Login | Civic Report</title>
+
+    <link rel="stylesheet" href="css/login.css" />
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+
+  <body>
+
+    <!-- ===================== BACKGROUND ===================== -->
+
+    <div class="grid-pattern" aria-hidden="true"></div>
+
+    <div class="bg-blob bg-blob--1" aria-hidden="true"></div>
+    <div class="bg-blob bg-blob--2" aria-hidden="true"></div>
+    <div class="bg-blob bg-blob--3" aria-hidden="true"></div>
+
+
+    <!-- ===================== NAVBAR ===================== -->
+
+    <header class="navbar" role="banner">
+
+      <div class="navbar__container">
+
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="navbar__logo"
+          aria-label="Civic Report Home"
+        >
+          <span class="navbar__logo-icon" aria-hidden="true">⚑</span>
+          Civic Report
+        </a>
+
+
+        <!-- Mobile Hamburger -->
+        <button
+          class="navbar__toggle"
+          id="navToggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+        </button>
+
+
+        <!-- Navigation -->
+        <nav
+          class="navbar__nav"
+          id="navMenu"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+
+          <ul class="navbar__links" role="list">
+
+            <li>
+              <a href="index.html" class="navbar__link">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html" class="navbar__link">
+                About
+              </a>
+            </li>
+
+            <li>
+              <a href="contact.html" class="navbar__link">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+
+          <!-- Navbar Buttons -->
+          <div class="navbar__actions">
+
+            <a href="register.html" class="btn btn--outline">
+              Register
+            </a>
+
+           
+
+          </div>
+
+        </nav>
+
+      </div>
+
+    </header>
+
+
+    <!-- ===================== MAIN ===================== -->
+
+    <main class="main" role="main">
+
+      <section
+        class="login-section"
+        aria-labelledby="loginHeading"
+      >
+
+
+        <!-- ===================== LEFT SIDE ===================== -->
+
+        <div class="login-left">
+
+          <!-- Decorative circle -->
+          <div
+            class="illustration-circle"
+            aria-hidden="true"
+          ></div>
+
+
+          <!-- Civic Illustration -->
+
+          <div class="login-illustration" aria-hidden="true">
+
+            <div class="illustration-city">
+
+              <div class="building building--1"></div>
+              <div class="building building--2"></div>
+              <div class="building building--3"></div>
+              <div class="building building--4"></div>
+
+            </div>
+
+            <div class="illustration-pin">
+              <i class="ph ph-map-pin"></i>
+            </div>
+
+            <div class="illustration-phone">
+              <i class="ph ph-device-mobile"></i>
+            </div>
+
+            <div class="illustration-check">
+              <i class="ph ph-check-circle"></i>
+            </div>
+
+          </div>
+
+
+          <!-- Left Side Text -->
+
+          <div class="login-left__content">
+
+            <span class="login-left__tag">
+              <i class="ph ph-buildings"></i>
+              Civic Report
+            </span>
+
+            <h2>
+              Report. Track. Resolve.
+            </h2>
+
+            <p>
+              Help make your community cleaner, safer,
+              and better by reporting civic issues and
+              tracking their progress.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- ===================== RIGHT SIDE ===================== -->
+
+        <div class="login-right">
+
+          <!-- Login Card -->
+
+          <div class="login-card">
+
+
+            <!-- Card Header -->
+
+            <div class="login-card__header">
+
+              <div
+                class="login-card__icon"
+                aria-hidden="true"
+              >
+                <i class="ph ph-shield-check"></i>
+              </div>
+
+              <h1
+                class="login-card__title"
+                id="loginHeading"
+              >
+                Welcome Back
+              </h1>
+
+              <p class="login-card__subtitle">
+                Secure login for all Civic Report users.
+              </p>
+
+            </div>
+
+
+            <!-- ===================== LOGIN FORM ===================== -->
+
+            <form
+              class="login-form"
+              id="loginForm"
+              action="#"
+              method="POST"
+              novalidate
+            >
+
+
+              <!-- Email -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="email"
+                >
+                  Email Address
+                </label>
+
+                <div class="input-wrapper">
+
+                  <i
+                    class="ph ph-envelope input-icon"
+                    aria-hidden="true"
+                  ></i>
+
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                  />
+
+                </div>
+
+              </div>
+
+
+              <!-- Password -->
+
+              <div class="form-group">
+
+                <div class="form-label-row">
+
+                  <label
+                    class="form-label"
+                    for="password"
+                  >
+                    Password
+                  </label>
+
+                  <a
+                    href="forgot-password.html"
+                    class="form-forgot-link"
+                  >
+                    Forgot Password?
+                  </a>
+
+                </div>
+
+
+                <div class="input-wrapper">
+
+                  <i
+                    class="ph ph-lock input-icon"
+                    aria-hidden="true"
+                  ></i>
+
+                  <input
+                    class="form-input form-input--password"
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                    aria-required="true"
+                  />
+
+
+                  <!-- Password Visibility Toggle -->
+
+                  <button
+                    class="password-toggle"
+                    type="button"
+                    id="passwordToggle"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                  >
+                    <i
+                      class="ph ph-eye"
+                      id="eyeIcon"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              <!-- Login Button -->
+
+              <button
+                class="btn btn--primary btn--full"
+                type="submit"
+              >
+                Login
+              </button>
+
+            </form>
+
+
+            <!-- Register Prompt -->
+
+            <p class="login-card__register-prompt">
+
+              Don't have an account?
+
+              <a
+                href="register.html"
+                class="login-card__register-link"
+              >
+                Create Account
+              </a>
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+ 
+
+    <script
+      src="js/script.js"
+      defer
+    ></script>
+
+  </body>
+</html>
