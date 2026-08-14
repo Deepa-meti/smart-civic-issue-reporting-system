@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Smart Civic</title>
+
+  <!-- Remixicon icon library -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- dashboard.css will be linked here -->
+  <link rel="stylesheet" href="css/mainPage.css">
+</head>
+
+<body class="dashboard-body">
+
+  <!-- ═══════════════════════════════════════════════
+       DECORATIVE BACKGROUND LAYER
+       All elements are purely visual / CSS-animated.
+       They sit behind the application shell via z-index.
+  ════════════════════════════════════════════════ -->
+  <div class="bg-layer" aria-hidden="true">
+
+    <!-- Large soft orbs -->
+    <span class="bg-orb bg-orb--primary"></span>
+    <span class="bg-orb bg-orb--secondary"></span>
+    <span class="bg-orb bg-orb--accent"></span>
+
+    <!-- Geometric rings -->
+    <span class="bg-ring bg-ring--lg"></span>
+    <span class="bg-ring bg-ring--md"></span>
+    <span class="bg-ring bg-ring--sm"></span>
+
+    <!-- Floating geometric shapes -->
+    <span class="bg-shape bg-shape--hex"></span>
+    <span class="bg-shape bg-shape--tri"></span>
+    <span class="bg-shape bg-shape--square"></span>
+
+    <!-- Subtle dot / grid overlay -->
+    <span class="bg-grid"></span>
+
+    <!-- Blurred floating particles -->
+    <span class="bg-particle bg-particle--1"></span>
+    <span class="bg-particle bg-particle--2"></span>
+    <span class="bg-particle bg-particle--3"></span>
+    <span class="bg-particle bg-particle--4"></span>
+
+  </div><!-- /bg-layer -->
+
+
+  <!-- ═══════════════════════════════════════════════
+       DASHBOARD APPLICATION SHELL
+  ════════════════════════════════════════════════ -->
+  <div class="dashboard-shell">
+
+
+    <!-- ─────────────────────────────────────────────
+         FIXED LEFT SIDEBAR
+    ────────────────────────────────────────────── -->
+    <aside class="sidebar" role="navigation" aria-label="Main navigation">
+
+      <!-- Brand -->
+      <div class="sidebar__brand">
+        <span class="sidebar__brand-icon" aria-hidden="true">
+          <i class="ri-building-2-fill"></i>
+        </span>
+        <span class="sidebar__brand-name">Smart Civic</span>
+      </div>
+
+      <!-- Primary navigation -->
+      <nav class="sidebar__nav">
+        <ul class="sidebar__nav-list" role="list">
+
+          <li class="sidebar__nav-item sidebar__nav-item--active">
+            <a href="dashboard.html" class="sidebar__nav-link" aria-current="page">
+              <i class="ri-dashboard-3-line sidebar__nav-icon" aria-hidden="true"></i>
+              <span class="sidebar__nav-label">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="sidebar__nav-item">
+            <a href="report-issue.html" class="sidebar__nav-link">
+              <i class="ri-add-circle-line sidebar__nav-icon" aria-hidden="true"></i>
+              <span class="sidebar__nav-label">Report Issue</span>
+            </a>
+          </li>
+
+          <li class="sidebar__nav-item">
+            <a href="my-reports.html" class="sidebar__nav-link">
+              <i class="ri-file-list-3-line sidebar__nav-icon" aria-hidden="true"></i>
+              <span class="sidebar__nav-label">My Reports</span>
+            </a>
+          </li>
+
+          <li class="sidebar__nav-item">
+            <a href="community.html" class="sidebar__nav-link">
+              <i class="ri-community-line sidebar__nav-icon" aria-hidden="true"></i>
+              <span class="sidebar__nav-label">Community</span>
+            </a>
+          </li>
+
+          <li class="sidebar__nav-item">
+            <a href="contact.html" class="sidebar__nav-link">
+              <i class="ri-phone-line sidebar__nav-icon" aria-hidden="true"></i>
+              <span class="sidebar__nav-label">Contact</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Divider before account items -->
+        <div class="sidebar__divider" role="separator" aria-hidden="true"></div>
+
+        <ul class="sidebar__nav-list sidebar__nav-list--account" role="list">
+
+          <li class="sidebar__nav-item">
+            <a href="profile.html" class="sidebar__nav-link">
+              <i class="ri-user-3-line sidebar__nav-icon" aria-hidden="true"></i>
+              <span class="sidebar__nav-label">Profile</span>
+            </a>
+          </li>
+
+          <li class="sidebar__nav-item">
+            <a href="settings.html" class="sidebar__nav-link">
+              <i class="ri-settings-4-line sidebar__nav-icon" aria-hidden="true"></i>
+              <span class="sidebar__nav-label">Settings</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Logout — pinned to sidebar bottom -->
+      <div class="sidebar__logout">
+        <a href="login.html" class="sidebar__logout-link">
+          <i class="ri-logout-box-r-line sidebar__nav-icon" aria-hidden="true"></i>
+          <span class="sidebar__nav-label">Logout</span>
+        </a>
+      </div>
+
+    </aside><!-- /sidebar -->
+
+
+    <!-- ─────────────────────────────────────────────
+         MAIN CONTENT AREA
+    ────────────────────────────────────────────── -->
+    <main class="main-content" id="main-content">
+
+
+      <!-- ·····················································
+           TOP HEADER — Notifications + User Identity
+      ····················································· -->
+      <header class="main-header">
+
+        <!-- Spacer pushes the identity cluster to the right -->
+        <div class="main-header__spacer" aria-hidden="true"></div>
+
+        <div class="main-header__identity">
+
+          <!-- Notification bell -->
+          <button
+            class="header-notification"
+            type="button"
+            aria-label="View notifications"
+            aria-haspopup="true"
+          >
+            <i class="ri-notification-3-line" aria-hidden="true"></i>
+            <!-- Unread badge — hide via CSS when count is zero -->
+            <span class="header-notification__badge" aria-label="3 unread notifications">3</span>
+          </button>
+
+          <!-- Profile picture + name -->
+          <div class="header-profile">
+            <img
+              class="header-profile__avatar"
+              src="assets/images/avatar-deepa.jpg"
+              alt="Profile picture of Deepa Meti"
+              width="36"
+              height="36"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            />
+            <!-- Fallback initials avatar shown if image fails to load -->
+            <span class="header-profile__initials" aria-hidden="true" style="display:none;">DM</span>
+            <span class="header-profile__name">Deepa Meti</span>
+          </div>
+
+        </div>
+
+      </header><!-- /main-header -->
+
+
+      <!-- ·····················································
+           DASHBOARD CONTENT
+      ····················································· -->
+      <div class="dashboard-content">
+
+
+        <!-- Welcome Section -->
+        <section class="welcome-section" aria-labelledby="welcome-heading">
+          <h1 class="welcome-section__greeting" id="welcome-heading">
+            Good Evening, Deepa 
+          </h1>
+          <p class="welcome-section__subtext">
+            Here's an overview of your civic reports.
+          </p>
+        </section><!-- /welcome-section -->
+
+
+        <!-- Statistics Row -->
+        <section class="stats-section" aria-label="Report statistics">
+          <div class="stats-grid">
+
+            <article class="stat-card stat-card--total" aria-label="Total reports: 18">
+              <div class="stat-card__icon-wrap" aria-hidden="true">
+                <i class="ri-file-list-2-line"></i>
+              </div>
+              <div class="stat-card__body">
+                <span class="stat-card__value">18</span>
+                <span class="stat-card__label">Total Reports</span>
+              </div>
+            </article>
+
+            <article class="stat-card stat-card--pending" aria-label="Pending reports: 4">
+              <div class="stat-card__icon-wrap" aria-hidden="true">
+                <i class="ri-time-line"></i>
+              </div>
+              <div class="stat-card__body">
+                <span class="stat-card__value">4</span>
+                <span class="stat-card__label">Pending</span>
+              </div>
+            </article>
+
+            <article class="stat-card stat-card--inprogress" aria-label="Reports in progress: 3">
+              <div class="stat-card__icon-wrap" aria-hidden="true">
+                <i class="ri-loader-3-line"></i>
+              </div>
+              <div class="stat-card__body">
+                <span class="stat-card__value">3</span>
+                <span class="stat-card__label">In Progress</span>
+              </div>
+            </article>
+
+            <article class="stat-card stat-card--resolved" aria-label="Resolved reports: 11">
+              <div class="stat-card__icon-wrap" aria-hidden="true">
+                <i class="ri-checkbox-circle-line"></i>
+              </div>
+              <div class="stat-card__body">
+                <span class="stat-card__value">11</span>
+                <span class="stat-card__label">Resolved</span>
+              </div>
+            </article>
+
+          </div>
+        </section><!-- /stats-section -->
+
+
+        <!-- Recent Reports Section -->
+        <section class="reports-section" aria-labelledby="recent-reports-heading">
+
+          <div class="reports-section__header">
+            <h2 class="reports-section__title" id="recent-reports-heading">Recent Reports</h2>
+            <a href="my-reports.html" class="reports-section__view-all" aria-label="View all reports">
+              View All <i class="ri-arrow-right-line" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="reports-table-wrap">
+            <table class="reports-table" aria-label="Recent civic reports">
+              <thead class="reports-table__head">
+                <tr>
+                  <th class="reports-table__th" scope="col">Issue</th>
+                  <th class="reports-table__th" scope="col">Status</th>
+                  <th class="reports-table__th reports-table__th--details" scope="col">Details</th>
+                </tr>
+              </thead>
+
+              <tbody class="reports-table__body">
+
+                <!-- Report row 1 -->
+                <tr class="reports-table__row">
+                  <td class="reports-table__td reports-table__td--issue">
+                    Pothole near main road
+                  </td>
+                  <td class="reports-table__td reports-table__td--status">
+                    <span class="status-badge status-badge--pending">
+                      <span class="status-badge__dot" aria-hidden="true"></span>
+                      Pending
+                    </span>
+                  </td>
+                  <td class="reports-table__td reports-table__td--action">
+                    <a
+                      href="report-details.html?id=RPT-001"
+                      class="report-view-link"
+                      aria-label="View details for Pothole near main road"
+                    >
+                      View <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+                    </a>
+                  </td>
+                </tr>
+
+                <!-- Report row 2 -->
+                <tr class="reports-table__row">
+                  <td class="reports-table__td reports-table__td--issue">
+                    Broken streetlight
+                  </td>
+                  <td class="reports-table__td reports-table__td--status">
+                    <span class="status-badge status-badge--inprogress">
+                      <span class="status-badge__dot" aria-hidden="true"></span>
+                      In Progress
+                    </span>
+                  </td>
+                  <td class="reports-table__td reports-table__td--action">
+                    <a
+                      href="report-details.html?id=RPT-002"
+                      class="report-view-link"
+                      aria-label="View details for Broken streetlight"
+                    >
+                      View <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+                    </a>
+                  </td>
+                </tr>
+
+                <!-- Report row 3 -->
+                <tr class="reports-table__row">
+                  <td class="reports-table__td reports-table__td--issue">
+                    Garbage accumulation
+                  </td>
+                  <td class="reports-table__td reports-table__td--status">
+                    <span class="status-badge status-badge--resolved">
+                      <span class="status-badge__dot" aria-hidden="true"></span>
+                      Resolved
+                    </span>
+                  </td>
+                  <td class="reports-table__td reports-table__td--action">
+                    <a
+                      href="report-details.html?id=RPT-003"
+                      class="report-view-link"
+                      aria-label="View details for Garbage accumulation"
+                    >
+                      View <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+                    </a>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div><!-- /reports-table-wrap -->
+
+        </section><!-- /reports-section -->
+
+
+      </div><!-- /dashboard-content -->
+
+    </main><!-- /main-content -->
+
+  </div><!-- /dashboard-shell -->
+
+</body>
+</html>
